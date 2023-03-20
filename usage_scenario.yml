@@ -10,7 +10,7 @@ services:
       dockerfile: ./python/examples/minimal_build/Dockerfile.ubuntu
     image: arrow_ubuntu_minimal
     setup-commands:
-      - cp -R /tmp/repo ~/arrow/
+      - cp -R /tmp/repo /arrow/
 
 
 flow:
@@ -18,5 +18,5 @@ flow:
     container: minimal-ubuntu-venv
     commands:
       - type: console
-        command: ~/arrow/python/examples/minimal_build/build_venv.sh
+        command: /arrow/python/examples/minimal_build/build_venv.sh
         note: Starting the arrow build
