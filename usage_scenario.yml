@@ -12,7 +12,6 @@ services:
     volumes:
       - ./:/arrow:delegated
       - .:/io:delegated
-      - ./python/examples/minimal_build/build_venv.sh:/io/build_venv.sh
 
 
 flow:
@@ -20,5 +19,5 @@ flow:
     container: minimal-ubuntu-venv
     commands:
       - type: console
-        command: /io/build_venv.sh
+        command: /io/python/examples/minimal_build/build_venv.sh
         note: Starting the arrow build
